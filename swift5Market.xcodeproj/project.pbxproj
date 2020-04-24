@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A92BCCB6D1A1E22C5BC4EC0 /* Pods_swift5Market.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9369D09DC85A5565F9B584 /* Pods_swift5Market.framework */; };
 		9BD69CC9245315DB0070B0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD69CC8245315DB0070B0B9 /* AppDelegate.swift */; };
 		9BD69CCB245315DB0070B0B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD69CCA245315DB0070B0B9 /* SceneDelegate.swift */; };
 		9BD69CCD245315DB0070B0B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD69CCC245315DB0070B0B9 /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		9BD69CD1245315DD0070B0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BD69CD4245315DD0070B0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BD69CD6245315DD0070B0B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE257856E7281D7711AEA805 /* Pods-swift5Market.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift5Market.release.xcconfig"; path = "Target Support Files/Pods-swift5Market/Pods-swift5Market.release.xcconfig"; sourceTree = "<group>"; };
+		CE6188EC356727E723A24F30 /* Pods-swift5Market.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift5Market.debug.xcconfig"; path = "Target Support Files/Pods-swift5Market/Pods-swift5Market.debug.xcconfig"; sourceTree = "<group>"; };
+		DA9369D09DC85A5565F9B584 /* Pods_swift5Market.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift5Market.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A92BCCB6D1A1E22C5BC4EC0 /* Pods_swift5Market.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1281177FA8105243D33C851F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE6188EC356727E723A24F30 /* Pods-swift5Market.debug.xcconfig */,
+				AE257856E7281D7711AEA805 /* Pods-swift5Market.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3FB7C4A4B29D1CC79C45D7A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA9369D09DC85A5565F9B584 /* Pods_swift5Market.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9BD69CBC245315DB0070B0B9 = {
 			isa = PBXGroup;
 			children = (
 				9BD69CC7245315DB0070B0B9 /* swift5Market */,
 				9BD69CC6245315DB0070B0B9 /* Products */,
+				1281177FA8105243D33C851F /* Pods */,
+				3FB7C4A4B29D1CC79C45D7A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BD69CD9245315DD0070B0B9 /* Build configuration list for PBXNativeTarget "swift5Market" */;
 			buildPhases = (
+				0BD6E6DAF6F64C629E93D3F6 /* [CP] Check Pods Manifest.lock */,
 				9BD69CC1245315DB0070B0B9 /* Sources */,
 				9BD69CC2245315DB0070B0B9 /* Frameworks */,
 				9BD69CC3245315DB0070B0B9 /* Resources */,
+				C27010F3D8011A73D86085BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BD6E6DAF6F64C629E93D3F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swift5Market-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C27010F3D8011A73D86085BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swift5Market/Pods-swift5Market-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swift5Market/Pods-swift5Market-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swift5Market/Pods-swift5Market-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9BD69CC1245315DB0070B0B9 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		9BD69CDA245315DD0070B0B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE6188EC356727E723A24F30 /* Pods-swift5Market.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		9BD69CDB245315DD0070B0B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE257856E7281D7711AEA805 /* Pods-swift5Market.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

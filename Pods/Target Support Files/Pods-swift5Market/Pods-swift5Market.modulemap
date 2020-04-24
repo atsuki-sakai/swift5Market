@@ -1,0 +1,6 @@
+framework module Pods_swift5Market {
+  umbrella header "Pods-swift5Market-umbrella.h"
+
+  export *
+  module * { export * }
+}
